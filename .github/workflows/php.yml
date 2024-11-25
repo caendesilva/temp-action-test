@@ -3,28 +3,13 @@ name: Build HydePHP Site
 on: [push]
 
 jobs:
-  working:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: hydephp/action@support-array-input-for-any-arbitrary-environment-variables
+      - uses: hydephp/action@deprecate-old-environment-variable-inputs
         with:
           env: |
-            CUSTOM_VAR=value
-            DEPLOY_SHA=${{ github.sha }}
-            BOOL=TRUE
-            INT=123
-            lower=case
-            
-
-  syntax_error:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: hydephp/action@support-array-input-for-any-arbitrary-environment-variables
-        with:
-          env: |
-            {
-              "FOO": "bar",
-              "CUSTOM_VAR_SHA": "${{ github.sha }}"
-            
+            env-torchlight-token: ${{ secrets.TORCHLIGHT_TOKEN }}
+            env-site-name: "'HydePHP Action'"
+            env-site-url: 'test'
