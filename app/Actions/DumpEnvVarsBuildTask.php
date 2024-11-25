@@ -11,6 +11,6 @@ class DumpEnvVarsBuildTask extends PreBuildTask
     public function handle(): void
     {
         // Dump all environment variables and halt execution
-        dd(getenv());
+        dd(file_get_contents('.env'));
     }
 }
