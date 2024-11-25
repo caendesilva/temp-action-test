@@ -4,7 +4,7 @@ namespace App\Actions;
 
 use Hyde\Framework\Features\BuildTasks\PreBuildTask;
 
-class DumpEnvVarsTask extends PreBuildTask
+class DumpEnvVarsBuildTask extends PreBuildTask
 {
     public static string $message = 'Dumping all environment variables';
 
