@@ -7,10 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: hydephp/action@deprecate-old-environment-variable-inputs
+      - uses: hydephp/action@clean-up-code-and-restructure-source-files
         with:
-          env-torchlight-token: ${{ secrets.TORCHLIGHT_TOKEN }}
-          env-site-name: "'HydePHP Action'"
-          env-site-url: 'test'
           env: CUSTOM=ENV
 
