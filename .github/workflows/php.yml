@@ -13,5 +13,5 @@ jobs:
           env-site-name: "'HydePHP Action'"
           env-site-url: 'test'
           env: |
-            CUSTOM: ENV
-            
+            CUSTOM=ENV
+
