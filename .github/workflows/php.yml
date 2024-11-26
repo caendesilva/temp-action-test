@@ -7,7 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: hydephp/action@clean-up-code-and-restructure-source-files
-        with:
-          env: CUSTOM=ENV
-
+      - uses: hydephp/action@add-warning-if-a-site-url-is-not-set
