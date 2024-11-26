@@ -52,9 +52,7 @@ return [
     | you will need to include that in the path.
     |
     */
-
-    'url' => env('SITE_URL', 'this.is.set.com'),
-
+    
     /*
     |--------------------------------------------------------------------------
     | Site Language
